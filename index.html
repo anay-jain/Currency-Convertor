@@ -1,0 +1,62 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <title> Currency Convertor </title>
+    <style>
+        *{
+            border-radius: 0 !important; 
+        }
+        body{
+            background-color: #E7f7f9;
+            font-family: 'poppins' , sans-serif;
+
+        }
+    
+    </style>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+<script src="app.js"> </script>
+</head>    
+<body>
+<div id="app">
+<div class="container my-5">
+     <div class="row">
+        <div class="col-md-6">
+            <label>From</label>
+            <select name="" id="" class="form-control">
+            <option value=""> usd</option>
+            <option value="">eur</option>
+        </select>
+        </div>
+        <div class="col-md-6">
+                <label>To</label>
+                <select name="" id="" class="form-control">
+                <option value="" v-for="currency in formattedCurrencies"> 
+                {{ currency.currencyName }}
+               </option>
+            </select>
+            </div>
+
+     </div>
+     <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <input v-model="amount" type = "text" placeholder="Amount" class="form-control my-5">
+            <div class="text-center">
+                <button class="btn btn-lg btn-primary">Convert</button>
+            </div>
+         </div>
+
+     </div>
+     <div class="row">
+         <div class="col-md-6 offset-md-3">
+             <h1 class="text-center display-2 mt-5">32.2</h1>
+         </div>
+     </div>
+</div>
+</div>
+
+
+</body>    
+</html>
+
